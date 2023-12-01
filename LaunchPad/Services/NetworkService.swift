@@ -7,15 +7,22 @@
 
 import Foundation
 
-enum NetworkError : Error {
-    case emptyData
-    case noResponse
-    case statusCode(code: Int)
-    case invalidURL
+/// Default endpoints for the SpaceX API
+enum APIEndpoints : String {
+    case launches = "https://api.spacexdata.com/v5/launches/"
+    case capsule = "https://api.spacexdata.com/v4/capsules/"
+    case crew = "https://api.spacexdata.com/v4/crew/"
+    case rocket = "https://api.spacexdata.com/v4/rockets/"
+    case launchPad = "https://api.spacexdata.com/v4/launchpads/"
+    case payload = "https://api.spacexdata.com/v4/payloads/"
+
 }
 
+/// Service class managing network requests for the whole app
 class NetworkService {
-
+    /// executes a HTTP Get request for the provided URL and returns the recieved data. Prints an error code, but otherwise just returns nil on exceptions
+    /// - Parameter urlString: String representation of an URL
+    /// - Returns: data recieved from the request og Nil if an error was thrown
     static func fetch (from urlString: String) async -> Data? {
         do {
             let session = URLSession.shared
@@ -40,5 +47,13 @@ class NetworkService {
 
         }
         return nil
+    }
+
+    /// Custom error types specific for the NetworkService class
+    enum NetworkError : Error {
+        case emptyData
+        case noResponse
+        case statusCode(code: Int)
+        case invalidURL
     }
 }

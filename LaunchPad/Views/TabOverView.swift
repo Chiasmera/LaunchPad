@@ -1,16 +1,11 @@
-//
-//  NavigationView.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 30/11/2023.
-//
-
 import SwiftUI
 
+
+/// The Main view of the App. Presents 3 tabs: a list of launches, a map of launchpads and a list of favorite launches
 struct TabOverView: View {
     var body: some View {
         TabView {
-            LaunchList()
+            LaunchListView()
                 .tabItem {
                     Label(
                         title: { Text("Launches") },
@@ -26,7 +21,7 @@ struct TabOverView: View {
                     )
                 }
 
-            Text("Favorites")
+            LaunchListView(favoritesOnly: true)
                 .tabItem {
                     Label(
                         title: { Text("Favorites") },
@@ -39,6 +34,6 @@ struct TabOverView: View {
 
 #Preview {
     TabOverView()
-        .environmentObject(LaunchController())
-        .environmentObject(LaunchpadController())
+        .environmentObject(ListViewModel())
+        .environmentObject(MapViewModel())
 }

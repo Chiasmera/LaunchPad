@@ -1,8 +1,16 @@
-//
-//  Rocket.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 29/11/2023.
-//
-
 import Foundation
+
+
+/// Represents a SpaceX Rocket
+struct Rocket : SpaceXObject {
+    let flickrImages : [URL?]
+    let name : String
+    let description : String
+    let id : String
+
+    var title: String { return name}
+
+    var imageURL: URL? { return flickrImages.first ?? nil}
+
+}
+

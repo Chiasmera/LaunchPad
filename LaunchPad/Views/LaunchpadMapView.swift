@@ -1,17 +1,10 @@
-//
-//  LaunchpadMapView.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 30/11/2023.
-//
-
 import SwiftUI
 import MapKit
 
 
+/// View presenting a map with clickable annotations for each SpaceX launchpad
 struct LaunchpadMapView: View {
-    @EnvironmentObject var launchpadController : LaunchpadController
-    @State private var selectedPad : Launchpad?
+    @EnvironmentObject var launchpadController : MapViewModel
     @State var path = [Routes]()
 
     var body: some View {
@@ -21,19 +14,21 @@ struct LaunchpadMapView: View {
                     Annotation(pad.fullName, coordinate: CLLocationCoordinate2D(latitude: pad.latitude, longitude: pad.longitude)) {
                         CustomAsyncImage(imageURL: pad.imageURL, size: .medium)
                             .onTapGesture {
-                                selectedPad = pad
+                                path.append(Routes.detailView(pad))
                             }
                     }
                 }
             }
-            .sheet(item: $selectedPad) { pad in
-                LaunchDetailView(current: pad, path: $path)
-
+            .navigationDestination(for: Routes.self) { route in
+                switch route {
+                case .detailView(let object):
+                    DetailView(shownObject: object, path: $path  )
+                }
             }
         }
     }
 }
 
 #Preview {
-    LaunchpadMapView().environmentObject(LaunchpadController())
+    LaunchpadMapView().environmentObject(MapViewModel())
 }

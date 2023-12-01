@@ -1,9 +1,3 @@
-//
-//  AsyncIcon.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 29/11/2023.
-//
 
 import SwiftUI
 
@@ -13,6 +7,8 @@ enum ImageSize : CGFloat {
     case large = 200
 }
 
+
+/// Custom implementation of an asynchronous image. Does NOT cache image currently, but fetches from provided URL each time view is created. Shows the SpaceX logo in absence of an image
 struct CustomAsyncImage: View {
     let imageURL : URL?
     let size : ImageSize

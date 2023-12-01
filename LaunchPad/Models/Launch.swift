@@ -1,29 +1,37 @@
-//
-//  Launch.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 29/11/2023.
-//
 
 import Foundation
 
-
-struct Launch : Codable, Identifiable, HasCrew, HasCapsules, HasRocket {
+/// Represents a SpaceX Launch
+struct Launch : HasCrew, HasCapsules, HasRockets, HasPayload {
     let links: Links
-    var rocket: String
+    var rocketID: String
     let details: String?
-    let crew: [Crew]
-    let capsules: [String]
+    let crewAssignment: [CrewAssignment]
+    let capsuleIDs: [String]
+    let payloadIDs: [String]
     let name: String
     let dateUnix: Date
     let id: String
 
+    enum CodingKeys: String, CodingKey {
+        case links, details, name,dateUnix,id
+        case rocketID = "rocket"
+        case crewAssignment = "crew"
+        case capsuleIDs = "capsules"
+        case payloadIDs = "payloads"
+    }
+
+    // Formatted date for convenience
     var dateString : String {
         return DateFormatter.localizedString(from: dateUnix, dateStyle: .short, timeStyle: .short)
     }
 
     var title: String {
         return name
+    }
+
+    var crewIDs: [String] {
+        return crewAssignment.map { $0.id }
     }
 
     var description: String {
@@ -34,12 +42,20 @@ struct Launch : Codable, Identifiable, HasCrew, HasCapsules, HasRocket {
         return links.patch.large
     }
 
+    var rocketIDs : [String] {
+        return [rocketID]
+    }
+
 }
 
+
+/// Nested object from API containing image links to Path images
 struct Links: Codable {
     let patch: Patch
 }
 
+
+/// Nested object from API containing image URLs for Patches
 struct Patch: Codable {
     let small: URL?
     let large: URL?

@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F0E35852B171CD5002FC0FE /* LaunchPadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E35842B171CD5002FC0FE /* LaunchPadApp.swift */; };
-		3F0E35872B171CD5002FC0FE /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E35862B171CD5002FC0FE /* NavigationView.swift */; };
 		3F0E35892B171CD6002FC0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E35882B171CD6002FC0FE /* Assets.xcassets */; };
 		3F0E358C2B171CD6002FC0FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E358B2B171CD6002FC0FE /* Preview Assets.xcassets */; };
-		3F4EF29A2B18A0EE00741F62 /* LaunchpadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF2992B18A0EE00741F62 /* LaunchpadController.swift */; };
+		3F4EF29A2B18A0EE00741F62 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF2992B18A0EE00741F62 /* MapViewModel.swift */; };
 		3F4EF29E2B18A1E000741F62 /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF29D2B18A1E000741F62 /* DecodingService.swift */; };
 		3F4EF2A02B18A2E600741F62 /* LaunchpadMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF29F2B18A2E600741F62 /* LaunchpadMapView.swift */; };
 		3F5E3BE72B17739C00F24325 /* Capsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E3BE62B17739C00F24325 /* Capsule.swift */; };
@@ -20,25 +19,33 @@
 		3F5E3BED2B1773F700F24325 /* Launchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E3BEC2B1773F700F24325 /* Launchpad.swift */; };
 		3F5E3BEF2B17841500F24325 /* SpaceXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E3BEE2B17841500F24325 /* SpaceXObject.swift */; };
 		3F5E3BF12B17853F00F24325 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5E3BF02B17853F00F24325 /* CustomAsyncImage.swift */; };
-		3FA3A6DD2B187473003BAE28 /* ObjectLinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A6DC2B187473003BAE28 /* ObjectLinkRow.swift */; };
-		3FA3A6E12B187B9E003BAE28 /* PreviewDATA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A6E02B187B9E003BAE28 /* PreviewDATA.swift */; };
 		3FA3A6E52B188A20003BAE28 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A6E42B188A20003BAE28 /* Routes.swift */; };
 		3FA3A6E72B189001003BAE28 /* TabOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A6E62B189001003BAE28 /* TabOverView.swift */; };
+		3FACDBD42B18FAD70028104F /* ObjectLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACDBD32B18FAD70028104F /* ObjectLink.swift */; };
+		3FACDBD62B190A560028104F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FACDBD52B190A560028104F /* StorageService.swift */; };
+		3FACDBDB2B190CBC0028104F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3FACDBDA2B190CBC0028104F /* FirebaseAnalytics */; };
+		3FACDBDD2B190CBC0028104F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FACDBDC2B190CBC0028104F /* FirebaseFirestoreSwift */; };
+		3FACDBDF2B190CBC0028104F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FACDBDE2B190CBC0028104F /* FirebaseStorage */; };
+		3FACDBE12B190CBC0028104F /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3FACDBE02B190CBC0028104F /* FirebaseStorageCombine-Community */; };
 		3FBC2B002B172B2F0066E6E0 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2AFF2B172B2F0066E6E0 /* Launch.swift */; };
-		3FBC2B022B17309C0066E6E0 /* LaunchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B012B17309C0066E6E0 /* LaunchList.swift */; };
-		3FBC2B042B1731170066E6E0 /* LaunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B032B1731170066E6E0 /* LaunchController.swift */; };
+		3FBC2B022B17309C0066E6E0 /* LaunchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B012B17309C0066E6E0 /* LaunchListView.swift */; };
+		3FBC2B042B1731170066E6E0 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B032B1731170066E6E0 /* ListViewModel.swift */; };
 		3FBC2B062B1736BF0066E6E0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B052B1736BF0066E6E0 /* NetworkService.swift */; };
 		3FBC2B082B174C2B0066E6E0 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B072B174C2B0066E6E0 /* IconRow.swift */; };
-		3FBC2B0A2B1756080066E6E0 /* LaunchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B092B1756080066E6E0 /* LaunchDetailView.swift */; };
+		3FBC2B0A2B1756080066E6E0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B092B1756080066E6E0 /* DetailView.swift */; };
+		3FFABB0A2B19D8E1002135DF /* LinkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB092B19D8E1002135DF /* LinkSection.swift */; };
+		3FFABB0C2B19EC8C002135DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */; };
+		3FFABB0E2B19F2AF002135DF /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB0D2B19F2AF002135DF /* Payload.swift */; };
+		3FFABB132B1A2A10002135DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB122B1A2A10002135DF /* FavoriteButton.swift */; };
+		3FFABB152B1A2B70002135DF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB142B1A2B70002135DF /* HomeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F0E35812B171CD5002FC0FE /* LaunchPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0E35842B171CD5002FC0FE /* LaunchPadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPadApp.swift; sourceTree = "<group>"; };
-		3F0E35862B171CD5002FC0FE /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		3F0E35882B171CD6002FC0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0E358B2B171CD6002FC0FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3F4EF2992B18A0EE00741F62 /* LaunchpadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadController.swift; sourceTree = "<group>"; };
+		3F4EF2992B18A0EE00741F62 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		3F4EF29D2B18A1E000741F62 /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
 		3F4EF29F2B18A2E600741F62 /* LaunchpadMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadMapView.swift; sourceTree = "<group>"; };
 		3F5E3BE62B17739C00F24325 /* Capsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsule.swift; sourceTree = "<group>"; };
@@ -47,16 +54,21 @@
 		3F5E3BEC2B1773F700F24325 /* Launchpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launchpad.swift; sourceTree = "<group>"; };
 		3F5E3BEE2B17841500F24325 /* SpaceXObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXObject.swift; sourceTree = "<group>"; };
 		3F5E3BF02B17853F00F24325 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
-		3FA3A6DC2B187473003BAE28 /* ObjectLinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLinkRow.swift; sourceTree = "<group>"; };
-		3FA3A6E02B187B9E003BAE28 /* PreviewDATA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDATA.swift; sourceTree = "<group>"; };
 		3FA3A6E42B188A20003BAE28 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		3FA3A6E62B189001003BAE28 /* TabOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOverView.swift; sourceTree = "<group>"; };
+		3FACDBD32B18FAD70028104F /* ObjectLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectLink.swift; sourceTree = "<group>"; };
+		3FACDBD52B190A560028104F /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		3FBC2AFF2B172B2F0066E6E0 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
-		3FBC2B012B17309C0066E6E0 /* LaunchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchList.swift; sourceTree = "<group>"; };
-		3FBC2B032B1731170066E6E0 /* LaunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchController.swift; sourceTree = "<group>"; };
+		3FBC2B012B17309C0066E6E0 /* LaunchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListView.swift; sourceTree = "<group>"; };
+		3FBC2B032B1731170066E6E0 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		3FBC2B052B1736BF0066E6E0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3FBC2B072B174C2B0066E6E0 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
-		3FBC2B092B1756080066E6E0 /* LaunchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailView.swift; sourceTree = "<group>"; };
+		3FBC2B092B1756080066E6E0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3FFABB092B19D8E1002135DF /* LinkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSection.swift; sourceTree = "<group>"; };
+		3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FFABB0D2B19F2AF002135DF /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
+		3FFABB122B1A2A10002135DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		3FFABB142B1A2B70002135DF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FACDBDB2B190CBC0028104F /* FirebaseAnalytics in Frameworks */,
+				3FACDBDD2B190CBC0028104F /* FirebaseFirestoreSwift in Frameworks */,
+				3FACDBE12B190CBC0028104F /* FirebaseStorageCombine-Community in Frameworks */,
+				3FACDBDF2B190CBC0028104F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,15 +105,14 @@
 		3F0E35832B171CD5002FC0FE /* LaunchPad */ = {
 			isa = PBXGroup;
 			children = (
+				3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */,
 				3F0E35952B1726AA002FC0FE /* Controllers */,
 				3F0E35942B17269E002FC0FE /* Views */,
 				3F0E35932B172693002FC0FE /* Services */,
 				3F0E35922B172689002FC0FE /* Models */,
 				3F0E35842B171CD5002FC0FE /* LaunchPadApp.swift */,
-				3FA3A6E42B188A20003BAE28 /* Routes.swift */,
 				3F0E35882B171CD6002FC0FE /* Assets.xcassets */,
 				3F0E358A2B171CD6002FC0FE /* Preview Content */,
-				3FA3A6E02B187B9E003BAE28 /* PreviewDATA.swift */,
 			);
 			path = LaunchPad;
 			sourceTree = "<group>";
@@ -119,6 +134,7 @@
 				3F5E3BEA2B1773E500F24325 /* Rocket.swift */,
 				3F5E3BEC2B1773F700F24325 /* Launchpad.swift */,
 				3F5E3BEE2B17841500F24325 /* SpaceXObject.swift */,
+				3FFABB0D2B19F2AF002135DF /* Payload.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +144,7 @@
 			children = (
 				3FBC2B052B1736BF0066E6E0 /* NetworkService.swift */,
 				3F4EF29D2B18A1E000741F62 /* DecodingService.swift */,
+				3FACDBD52B190A560028104F /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -136,8 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3FA3A6E62B189001003BAE28 /* TabOverView.swift */,
-				3F0E35862B171CD5002FC0FE /* NavigationView.swift */,
-				3F0E35992B172793002FC0FE /* FavoritesTab */,
+				3FFABB112B1A29F6002135DF /* DetailsView */,
 				3F0E35982B172727002FC0FE /* LaunchpadTab */,
 				3F0E35962B172713002FC0FE /* Components */,
 				3F0E35972B17271F002FC0FE /* LaunchesTab */,
@@ -148,8 +164,9 @@
 		3F0E35952B1726AA002FC0FE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FBC2B032B1731170066E6E0 /* LaunchController.swift */,
-				3F4EF2992B18A0EE00741F62 /* LaunchpadController.swift */,
+				3FA3A6E42B188A20003BAE28 /* Routes.swift */,
+				3FBC2B032B1731170066E6E0 /* ListViewModel.swift */,
+				3F4EF2992B18A0EE00741F62 /* MapViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,7 +176,8 @@
 			children = (
 				3FBC2B072B174C2B0066E6E0 /* IconRow.swift */,
 				3F5E3BF02B17853F00F24325 /* CustomAsyncImage.swift */,
-				3FA3A6DC2B187473003BAE28 /* ObjectLinkRow.swift */,
+				3FACDBD32B18FAD70028104F /* ObjectLink.swift */,
+				3FFABB092B19D8E1002135DF /* LinkSection.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -167,8 +185,7 @@
 		3F0E35972B17271F002FC0FE /* LaunchesTab */ = {
 			isa = PBXGroup;
 			children = (
-				3FBC2B012B17309C0066E6E0 /* LaunchList.swift */,
-				3FBC2B092B1756080066E6E0 /* LaunchDetailView.swift */,
+				3FBC2B012B17309C0066E6E0 /* LaunchListView.swift */,
 			);
 			path = LaunchesTab;
 			sourceTree = "<group>";
@@ -181,11 +198,14 @@
 			name = LaunchpadTab;
 			sourceTree = "<group>";
 		};
-		3F0E35992B172793002FC0FE /* FavoritesTab */ = {
+		3FFABB112B1A29F6002135DF /* DetailsView */ = {
 			isa = PBXGroup;
 			children = (
+				3FBC2B092B1756080066E6E0 /* DetailView.swift */,
+				3FFABB122B1A2A10002135DF /* FavoriteButton.swift */,
+				3FFABB142B1A2B70002135DF /* HomeButton.swift */,
 			);
-			path = FavoritesTab;
+			path = DetailsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +224,12 @@
 			dependencies = (
 			);
 			name = LaunchPad;
+			packageProductDependencies = (
+				3FACDBDA2B190CBC0028104F /* FirebaseAnalytics */,
+				3FACDBDC2B190CBC0028104F /* FirebaseFirestoreSwift */,
+				3FACDBDE2B190CBC0028104F /* FirebaseStorage */,
+				3FACDBE02B190CBC0028104F /* FirebaseStorageCombine-Community */,
+			);
 			productName = LaunchPad;
 			productReference = 3F0E35812B171CD5002FC0FE /* LaunchPad.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +258,9 @@
 				Base,
 			);
 			mainGroup = 3F0E35782B171CD5002FC0FE;
+			packageReferences = (
+				3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3F0E35822B171CD5002FC0FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,6 +277,7 @@
 			files = (
 				3F0E358C2B171CD6002FC0FE /* Preview Assets.xcassets in Resources */,
 				3F0E35892B171CD6002FC0FE /* Assets.xcassets in Resources */,
+				3FFABB0C2B19EC8C002135DF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,25 +289,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5E3BEF2B17841500F24325 /* SpaceXObject.swift in Sources */,
+				3FACDBD62B190A560028104F /* StorageService.swift in Sources */,
 				3FBC2B082B174C2B0066E6E0 /* IconRow.swift in Sources */,
+				3FFABB152B1A2B70002135DF /* HomeButton.swift in Sources */,
+				3FFABB132B1A2A10002135DF /* FavoriteButton.swift in Sources */,
+				3FFABB0E2B19F2AF002135DF /* Payload.swift in Sources */,
 				3F4EF29E2B18A1E000741F62 /* DecodingService.swift in Sources */,
 				3F5E3BE72B17739C00F24325 /* Capsule.swift in Sources */,
-				3F0E35872B171CD5002FC0FE /* NavigationView.swift in Sources */,
 				3F4EF2A02B18A2E600741F62 /* LaunchpadMapView.swift in Sources */,
-				3FBC2B0A2B1756080066E6E0 /* LaunchDetailView.swift in Sources */,
+				3FFABB0A2B19D8E1002135DF /* LinkSection.swift in Sources */,
+				3FBC2B0A2B1756080066E6E0 /* DetailView.swift in Sources */,
 				3FA3A6E52B188A20003BAE28 /* Routes.swift in Sources */,
 				3F5E3BF12B17853F00F24325 /* CustomAsyncImage.swift in Sources */,
 				3F5E3BE92B1773BC00F24325 /* Crew.swift in Sources */,
 				3F5E3BED2B1773F700F24325 /* Launchpad.swift in Sources */,
-				3F4EF29A2B18A0EE00741F62 /* LaunchpadController.swift in Sources */,
-				3FA3A6E12B187B9E003BAE28 /* PreviewDATA.swift in Sources */,
+				3F4EF29A2B18A0EE00741F62 /* MapViewModel.swift in Sources */,
 				3FA3A6E72B189001003BAE28 /* TabOverView.swift in Sources */,
 				3FBC2B002B172B2F0066E6E0 /* Launch.swift in Sources */,
-				3FBC2B022B17309C0066E6E0 /* LaunchList.swift in Sources */,
-				3FBC2B042B1731170066E6E0 /* LaunchController.swift in Sources */,
-				3FA3A6DD2B187473003BAE28 /* ObjectLinkRow.swift in Sources */,
+				3FBC2B022B17309C0066E6E0 /* LaunchListView.swift in Sources */,
+				3FBC2B042B1731170066E6E0 /* ListViewModel.swift in Sources */,
 				3FBC2B062B1736BF0066E6E0 /* NetworkService.swift in Sources */,
 				3F0E35852B171CD5002FC0FE /* LaunchPadApp.swift in Sources */,
+				3FACDBD42B18FAD70028104F /* ObjectLink.swift in Sources */,
 				3F5E3BEB2B1773E500F24325 /* Rocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +515,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FACDBDA2B190CBC0028104F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3FACDBDC2B190CBC0028104F /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		3FACDBDE2B190CBC0028104F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		3FACDBE02B190CBC0028104F /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FACDBD92B190CBC0028104F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F0E35792B171CD5002FC0FE /* Project object */;
 }

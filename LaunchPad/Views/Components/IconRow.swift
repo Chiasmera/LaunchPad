@@ -1,12 +1,8 @@
-//
-//  IconRow.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 29/11/2023.
-//
 
 import SwiftUI
 
+
+/// Generic view for presenting a row with a title, subtitle and image
 struct IconRow: View {
     let imageURL : URL?
     let title : String
@@ -14,9 +10,7 @@ struct IconRow: View {
 
     var body: some View {
         HStack {
-
                 CustomAsyncImage(imageURL: imageURL, size: .small)
-            
 
             VStack (alignment: .leading) {
                 Text(title)

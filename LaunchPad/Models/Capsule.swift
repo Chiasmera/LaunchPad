@@ -1,26 +1,28 @@
-//
-//  Capsule.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 29/11/2023.
-//
 
 import Foundation
 
-struct Capsule : Codable, Identifiable, HasLaunches {
-    let lastUpdate : String
-    let launches : [String]
+
+/// Represents a SpaceX Capsule
+struct Capsule : HasLaunches {
+    let lastUpdate : String?
+    let launchIDs : [String]
     let serial : String
-    let status: String
+    let status: String?
     let type : String
     let id : String
+
+    enum CodingKeys: String, CodingKey {
+        case lastUpdate, serial, status,type,id
+        case launchIDs = "launches"
+    }
+
 
     var title: String {
         return serial
     }
 
     var description: String {
-        return status
+        return status ?? ""
     }
 
     var imageURL: URL? {

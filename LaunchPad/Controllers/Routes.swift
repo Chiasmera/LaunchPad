@@ -1,9 +1,3 @@
-//
-//  NavigationController.swift
-//  LaunchPad
-//
-//  Created by dmu mac 23 on 30/11/2023.
-//
 
 import Foundation
 

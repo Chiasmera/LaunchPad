@@ -7,15 +7,24 @@
 
 import Foundation
 
-struct Launchpad : Codable, Identifiable, HasLaunches {
+
+/// Represents a SpaceX Launchpad
+struct Launchpad : HasLaunches, HasRockets {
     let images : Images
     let name: String
     let fullName : String
     let latitude: Double
     let longitude: Double
-    let launches : [String]
+    let rocketIDs : [String]
+    let launchIDs : [String]
     let details : String
     let id: String
+
+    enum CodingKeys: String, CodingKey {
+        case images, name, fullName, latitude, longitude, details, id
+        case launchIDs = "launches"
+        case rocketIDs = "rockets"
+    }
 
     struct Images : Codable{
         let large : [URL]

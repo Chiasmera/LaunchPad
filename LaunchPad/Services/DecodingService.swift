@@ -7,7 +7,10 @@
 
 import Foundation
 
+
+/// Service class responsible for decoding JSON
 class DecodingService {
+    
     /// Helper method to decode JSON with default set of strategies. Assumes UNIX time and converts from snakecase to camelcase
     /// - Parameters:
     ///   - type: The type of the expected result
