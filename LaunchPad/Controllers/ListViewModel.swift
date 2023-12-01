@@ -63,13 +63,13 @@ class ListViewModel : ObservableObject{
             return nil
         }
     }
-    
 
     /// Attempts to fetch an array of the specified type, by fetching and decoding from the SpaceX API endpoint corresponding to that type.
     /// - Parameter ids: A list of String IDs representing objects of the provided type
     /// - Returns: A list of successfully retrieved objects, or an empty list if no IDs could be retrieved successfully
     func fetchLinked<T : SpaceXObject>(forIDs ids: [String]) async -> [T] {
-        var urlbase : String
+        //TODO - Should be extracted to helper function in the future
+        var urlbase : String?
         switch T.self {
         case is Launch.Type:
             urlbase = APIEndpoints.launches.rawValue
@@ -87,13 +87,31 @@ class ListViewModel : ObservableObject{
             return []
         }
 
-        var resultList = [T]()
-        for id in ids {
-            if let result : T = await fetchAndDecode(url: urlbase + id) {
-                resultList.append(result)
+        guard let urlbase else {return []}
+        var results : [T]?
+
+        do {
+            try await withThrowingTaskGroup(of: T?.self) { group in
+                for id in ids {
+                    group.addTask {
+                        guard let result : T = await self.fetchAndDecode(url: urlbase + id) else  {return nil}
+                            return result
+                    }
+                }
+
+                var resultList = [T]()
+
+                for try await result in group {
+                    guard let result else {return}
+                    resultList.append(result)
+                }
+
+                results = resultList
             }
+        } catch {
+            print("error in fetching objects concurrently. Message: \(error.localizedDescription)")
         }
-        return resultList
+        return results ?? []
     }
 
 

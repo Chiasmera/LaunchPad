@@ -10,6 +10,8 @@ struct Rocket : SpaceXObject {
 
     var title: String { return name}
 
+    var shortInfo: String { "" }
+
     var imageURL: URL? { return flickrImages.first ?? nil}
 
 }

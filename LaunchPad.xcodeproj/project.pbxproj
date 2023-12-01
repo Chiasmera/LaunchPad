@@ -10,6 +10,8 @@
 		3F0E35852B171CD5002FC0FE /* LaunchPadApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E35842B171CD5002FC0FE /* LaunchPadApp.swift */; };
 		3F0E35892B171CD6002FC0FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E35882B171CD6002FC0FE /* Assets.xcassets */; };
 		3F0E358C2B171CD6002FC0FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E358B2B171CD6002FC0FE /* Preview Assets.xcassets */; };
+		3F2AFBE02B1A3C9A002231E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2AFBDF2B1A3C9A002231E5 /* GoogleService-Info.plist */; };
+		3F2AFBE22B1A3FE5002231E5 /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AFBE12B1A3FE5002231E5 /* DetailHeaderView.swift */; };
 		3F4EF29A2B18A0EE00741F62 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF2992B18A0EE00741F62 /* MapViewModel.swift */; };
 		3F4EF29E2B18A1E000741F62 /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF29D2B18A1E000741F62 /* DecodingService.swift */; };
 		3F4EF2A02B18A2E600741F62 /* LaunchpadMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4EF29F2B18A2E600741F62 /* LaunchpadMapView.swift */; };
@@ -34,7 +36,6 @@
 		3FBC2B082B174C2B0066E6E0 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B072B174C2B0066E6E0 /* IconRow.swift */; };
 		3FBC2B0A2B1756080066E6E0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC2B092B1756080066E6E0 /* DetailView.swift */; };
 		3FFABB0A2B19D8E1002135DF /* LinkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB092B19D8E1002135DF /* LinkSection.swift */; };
-		3FFABB0C2B19EC8C002135DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */; };
 		3FFABB0E2B19F2AF002135DF /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB0D2B19F2AF002135DF /* Payload.swift */; };
 		3FFABB132B1A2A10002135DF /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB122B1A2A10002135DF /* FavoriteButton.swift */; };
 		3FFABB152B1A2B70002135DF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFABB142B1A2B70002135DF /* HomeButton.swift */; };
@@ -45,6 +46,8 @@
 		3F0E35842B171CD5002FC0FE /* LaunchPadApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPadApp.swift; sourceTree = "<group>"; };
 		3F0E35882B171CD6002FC0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F0E358B2B171CD6002FC0FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F2AFBDF2B1A3C9A002231E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F2AFBE12B1A3FE5002231E5 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		3F4EF2992B18A0EE00741F62 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		3F4EF29D2B18A1E000741F62 /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
 		3F4EF29F2B18A2E600741F62 /* LaunchpadMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadMapView.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		3FBC2B072B174C2B0066E6E0 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		3FBC2B092B1756080066E6E0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3FFABB092B19D8E1002135DF /* LinkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkSection.swift; sourceTree = "<group>"; };
-		3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FFABB0D2B19F2AF002135DF /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
 		3FFABB122B1A2A10002135DF /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		3FFABB142B1A2B70002135DF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
@@ -105,7 +107,7 @@
 		3F0E35832B171CD5002FC0FE /* LaunchPad */ = {
 			isa = PBXGroup;
 			children = (
-				3FFABB0B2B19EC8C002135DF /* GoogleService-Info.plist */,
+				3F2AFBDF2B1A3C9A002231E5 /* GoogleService-Info.plist */,
 				3F0E35952B1726AA002FC0FE /* Controllers */,
 				3F0E35942B17269E002FC0FE /* Views */,
 				3F0E35932B172693002FC0FE /* Services */,
@@ -204,6 +206,7 @@
 				3FBC2B092B1756080066E6E0 /* DetailView.swift */,
 				3FFABB122B1A2A10002135DF /* FavoriteButton.swift */,
 				3FFABB142B1A2B70002135DF /* HomeButton.swift */,
+				3F2AFBE12B1A3FE5002231E5 /* DetailHeaderView.swift */,
 			);
 			path = DetailsView;
 			sourceTree = "<group>";
@@ -277,7 +280,7 @@
 			files = (
 				3F0E358C2B171CD6002FC0FE /* Preview Assets.xcassets in Resources */,
 				3F0E35892B171CD6002FC0FE /* Assets.xcassets in Resources */,
-				3FFABB0C2B19EC8C002135DF /* GoogleService-Info.plist in Resources */,
+				3F2AFBE02B1A3C9A002231E5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +295,7 @@
 				3FACDBD62B190A560028104F /* StorageService.swift in Sources */,
 				3FBC2B082B174C2B0066E6E0 /* IconRow.swift in Sources */,
 				3FFABB152B1A2B70002135DF /* HomeButton.swift in Sources */,
+				3F2AFBE22B1A3FE5002231E5 /* DetailHeaderView.swift in Sources */,
 				3FFABB132B1A2A10002135DF /* FavoriteButton.swift in Sources */,
 				3FFABB0E2B19F2AF002135DF /* Payload.swift in Sources */,
 				3F4EF29E2B18A1E000741F62 /* DecodingService.swift in Sources */,

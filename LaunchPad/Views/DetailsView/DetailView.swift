@@ -17,16 +17,8 @@ struct DetailView: View {
     }
 
     var body: some View {
-        VStack (alignment: .center) {
-            CustomAsyncImage(imageURL: shownObject.imageURL, size: .medium)
-            
-            Text(shownObject.title)
-                .font(.title)
-
-            if !shownObject.description.isEmpty{
-                    Text(shownObject.description)
-                        .font(.caption)
-            }
+        VStack {
+            DetailHeaderView(shownObject: shownObject)
 
             List{
                 if  !crews.isEmpty  {
@@ -51,15 +43,12 @@ struct DetailView: View {
             }
 
         }
-        .padding()
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            HStack{
                 if (shownObject is Launch) {
                     FavoriteButton(isFavorite: isFavorite, id: shownObject.id)
                 }
                 HomeButton(path: $path)
-
-            }
         }
         .task { @MainActor in
             if let rocketed = shownObject as? (any HasRockets) {

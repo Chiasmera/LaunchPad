@@ -38,6 +38,8 @@ struct Launchpad : HasLaunches, HasRockets {
         return details
     }
 
+    var shortInfo: String { return "(\(latitude), \(longitude)"}
+
     var imageURL: URL? {
         return images.large.first
     }

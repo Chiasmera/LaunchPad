@@ -9,6 +9,7 @@ protocol SpaceXObject : Displayable, Identifiable, Codable {
 protocol Displayable {
     var title : String {get}
     var description : String {get}
+    var shortInfo : String {get}
     var imageURL : URL? {get}
 }
 

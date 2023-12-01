@@ -33,8 +33,10 @@ struct Crew : HasLaunches {
         return name
     }
 
+    var shortInfo : String {return status}
+
     var description: String {
-        return agency
+        return "from \(agency)"
     }
 
     var imageURL: URL? {

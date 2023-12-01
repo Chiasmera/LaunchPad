@@ -18,7 +18,7 @@ struct LaunchListView: View {
                             IconRow(
                                 imageURL: launch.links.patch.small,
                                 title: launch.name,
-                                subText: launch.dateString
+                                subText: launch.shortInfo
                             )
 
                         }
@@ -33,7 +33,7 @@ struct LaunchListView: View {
                     DetailView(shownObject: object, path: $path  )
                 }
             }
-            
+
         }
     }
 }
@@ -41,4 +41,3 @@ struct LaunchListView: View {
 #Preview {
     LaunchListView().environmentObject(ListViewModel())
 }
-

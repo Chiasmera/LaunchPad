@@ -12,10 +12,15 @@ struct LaunchpadMapView: View {
             Map (initialPosition: .automatic) {
                 ForEach (launchpadController.launchpads) { pad in
                     Annotation(pad.fullName, coordinate: CLLocationCoordinate2D(latitude: pad.latitude, longitude: pad.longitude)) {
-                        CustomAsyncImage(imageURL: pad.imageURL, size: .medium)
+                        CustomAsyncImage(imageURL: pad.imageURL, size: ImageSize.small, scaleMode: ScaleMode.fill)
                             .onTapGesture {
                                 path.append(Routes.detailView(pad))
                             }
+                            .scaledToFill()
+                            .clipShape(.circle)
+                            .overlay(RoundedRectangle(cornerRadius: 100)
+                                .stroke(.black, lineWidth: 2))
+
                     }
                 }
             }
@@ -30,5 +35,5 @@ struct LaunchpadMapView: View {
 }
 
 #Preview {
-    LaunchpadMapView().environmentObject(MapViewModel())
+    LaunchpadMapView().environmentObject(MapViewModel()).environmentObject(ListViewModel())
 }

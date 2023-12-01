@@ -7,9 +7,10 @@ struct LaunchPadApp: App {
     let listVM : ListViewModel
     let mapVM : MapViewModel
 
-
     init() {
+        //Initialize firebase
         FirebaseApp.configure()
+        //Instantiate viewmodels
         listVM = ListViewModel()
         mapVM = MapViewModel()
     }

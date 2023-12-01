@@ -43,7 +43,7 @@ class NetworkService {
         } catch NetworkError.invalidURL {
             print("Provided string could not be converted to URL. String: \(urlString)")
         } catch {
-            print("Unknown error occured while fetching from url \(urlString)")
+            print("Unknown error occured while fetching from url \(urlString) with error\(error.localizedDescription)")
 
         }
         return nil

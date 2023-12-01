@@ -22,8 +22,10 @@ struct Capsule : HasLaunches {
     }
 
     var description: String {
-        return status ?? ""
+        return lastUpdate != nil ? "last update was: \(lastUpdate ?? "Eerie silence")" : ""
     }
+
+    var shortInfo: String {return status ?? ""}
 
     var imageURL: URL? {
         return nil

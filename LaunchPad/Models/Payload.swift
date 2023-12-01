@@ -17,8 +17,10 @@ struct Payload : HasLaunches{
         return name
     }
 
+    var shortInfo: String {return type}
+
     var description: String {
-        return type
+        return ""
     }
 
     var imageURL: URL? {

@@ -22,9 +22,9 @@ struct Launch : HasCrew, HasCapsules, HasRockets, HasPayload {
     }
 
     // Formatted date for convenience
-    var dateString : String {
-        return DateFormatter.localizedString(from: dateUnix, dateStyle: .short, timeStyle: .short)
-    }
+//    var dateString : String {
+//        return DateFormatter.localizedString(from: dateUnix, dateStyle: .short, timeStyle: .short)
+//    }
 
     var title: String {
         return name
@@ -33,6 +33,8 @@ struct Launch : HasCrew, HasCapsules, HasRockets, HasPayload {
     var crewIDs: [String] {
         return crewAssignment.map { $0.id }
     }
+
+    var shortInfo : String {return DateFormatter.localizedString(from: dateUnix, dateStyle: .short, timeStyle: .short)}
 
     var description: String {
         return details ?? ""

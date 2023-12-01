@@ -10,7 +10,10 @@ struct IconRow: View {
 
     var body: some View {
         HStack {
-                CustomAsyncImage(imageURL: imageURL, size: .small)
+            CustomAsyncImage(imageURL: imageURL, size: .small, scaleMode: .fit)
+                .clipShape(.circle)
+                .overlay(RoundedRectangle(cornerRadius: 100)
+                    .stroke(.black, lineWidth: 2))
 
             VStack (alignment: .leading) {
                 Text(title)
